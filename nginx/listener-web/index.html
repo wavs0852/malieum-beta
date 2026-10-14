@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>listener-web</title>
+    <script type="module" crossorigin src="/assets/index-ChZgLqKj.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-uwm5eewF.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      (function () {
+        var bootParam = '__listener_boot'
+        if (window.location.pathname.indexOf('/session/') !== 0) return
+
+        var url = new URL(window.location.href)
+        if (url.searchParams.get(bootParam) === '1') return
+
+        url.searchParams.set(bootParam, '1')
+        url.searchParams.set('_', Date.now().toString())
+        window.location.replace(url.toString())
+      })()
+    </script>
+  </body>
+</html>

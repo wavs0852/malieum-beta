@@ -1,0 +1,11 @@
+model: "/data/models/MiLMMT-46-12B-v0.1-AWQ"
+tokenizer: "/data/models/MiLMMT-46-12B-v0.1-AWQ"
+quantization: "compressed-tensors"
+tensor_parallel_size: 1
+dtype: "bfloat16"
+max_model_len: 4096
+max_num_seqs: 64
+gpu_memory_utilization: 0.80
+enforce_eager: False
+enable_prefix_caching: False
+disable_log_stats: True

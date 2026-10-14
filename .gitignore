@@ -38,14 +38,6 @@ pip-delete-this-directory.txt
 *.mo
 *.pot
 
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# IPython
-profile_default/
-ipython_config.py
-
-
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
 __pypackages__/
 
@@ -58,7 +50,19 @@ ENV/
 env.bak/
 venv.bak/
 
-# 특정 경로는 다시 허용
+# etc
+*.env
+*.conf
+node_modules/
+redis/data/*
+temp/*
+.agents
+.codex
+.gitignore
+commit-message.txt
+
+
+# 수정된 vllm 코드 공개를 위한 제한적 venv 경로 허용
 !.venv/
 !.venv/lib/
 !.venv/lib/python3.12/
@@ -66,4 +70,3 @@ venv.bak/
 
 .venv/lib/python3.12/site-packages/*
 !.venv/lib/python3.12/site-packages/vllm/
-commit-message.txt
